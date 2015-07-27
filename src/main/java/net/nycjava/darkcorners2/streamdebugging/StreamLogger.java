@@ -39,6 +39,7 @@ class StreamLogger<T> implements InvocationHandler {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public Object invoke(Object object, Method method, Object[] args) throws Throwable {
         if (method.getReturnType().equals(Stream.class)) {
 

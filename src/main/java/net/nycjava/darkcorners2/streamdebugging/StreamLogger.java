@@ -21,6 +21,7 @@ class StreamLogger<T> implements InvocationHandler {
         return debug(stream, 1);
     }
 
+    @SuppressWarnings("unchecked")
     public static <T> Stream<T> debug(Stream<T> stream, int stage) {
         return (Stream<T>) newProxyInstance(
                 StreamLogger.class.getClassLoader(),
